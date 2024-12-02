@@ -93,16 +93,19 @@ export default function RegistrationForm() {
     try {
       e.preventDefault();
       validateForm();
-      const response = await fetch("http://localhost:4000/user/login", {
-        method: "POST",
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://golden-wheat-backend-ocs3ziby4-aashitas-projects-5cef0c8d.vercel.app/user/login",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       console.log("response", response);
       const responsedata = await response.json();

@@ -11,7 +11,8 @@ export default function GroupCards() {
 
   const fetchProducts = async () => {
     try {
-      const endpoint = "http://localhost:4000/products/";
+      const endpoint =
+        "https://golden-wheat-backend-ocs3ziby4-aashitas-projects-5cef0c8d.vercel.app/products/";
       const response = await fetch(endpoint);
 
       if (!response.ok) {

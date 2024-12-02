@@ -21,7 +21,9 @@ export default function IndividualProductPage({ params }) {
 
   async function fetchData() {
     try {
-      const response = await fetch(`http://localhost:4000/products/${id}`);
+      const response = await fetch(
+        `https://golden-wheat-backend-ocs3ziby4-aashitas-projects-5cef0c8d.vercel.app/products/${id}`
+      );
       const data = await response.json();
       setProduct(data);
     } catch (error) {
